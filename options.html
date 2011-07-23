@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Shortcuts Options</title>
+</head>
+
+<script type="text/javascript">
+
+// Saves options to localStorage.
+function save_options() {
+  var select = document.getElementById("os");
+  var os = select.children[select.selectedIndex].value;
+  localStorage["favorite_os"] = os;
+
+  // Update status to let user know options were saved.
+  var status = document.getElementById("status");
+  status.innerHTML = "Options Saved.";
+  setTimeout(function() {
+    status.innerHTML = "";
+  }, 750);
+}
+
+// Restores select box state to saved value from localStorage.
+function restore_options() {
+  var favorite = localStorage["favorite_os"];
+  if (!favorite) {
+    return;
+  }
+  var select = document.getElementById("os");
+  for (var i = 0; i < select.children.length; i++) {
+    var child = select.children[i];
+    if (child.value == favorite) {
+      child.selected = "true";
+      break;
+    }
+  }
+}
+
+</script>
+
+<body onload="restore_options()">
+
+Select your Operating System for the Chrome shortcuts:
+<select id="os">
+ <option value="linux">Linux</option>
+ <option value="macOSX">MacOS X</option>
+ <option value="windows">Windows</option>
+
+</select>
+
+<br>
+<button onclick="save_options()">Save</button>
+<p id="status"></p>
+</body>
+</html>

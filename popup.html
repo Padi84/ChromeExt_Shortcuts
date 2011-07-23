@@ -1,0 +1,1401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="popup.css">
+<script language="JavaScript" src="contentscript.js"></script>
+</head>
+
+
+<body onload="checkOSinOptions();restore_status();">
+
+
+	<div id="search" role="search">
+		<input id="search-input" name="string" type="search" onkeypress= "getSearch(event.keyCode);" results="0" autofocus="" placeholder="Shortcut für ...">
+	</div>
+
+
+	<div id="contMacOSX" class="popupcontent" style="display: none;">
+
+		<div class="table">
+			<h3>
+				<img id="IMGscTFMAC" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span id="mein">Tastaturkürzel
+					für Tabs und Fenster</span>
+			</h3>
+			<table id="scTFMAC" cellspacing="0" cellpadding="3"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-N</strong></td>
+						<td class="border_right">Öffnet ein neues Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-T</strong></td>
+						<td class="border_right">Öffnet einen neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-N</strong></td>
+						<td class="border_right">Öffnet ein neues Fenster im Modus
+							für anonymes Browsen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-O</strong> drücken und
+							Datei auswählen</td>
+						<td class="border_right">Öffnet eine Datei von Ihrem Computer
+							in Google Chrome.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘</strong> drücken und auf
+							einen Link klicken oder mit der mittleren Maustaste oder dem
+							Mausrad auf einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab
+							im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste</strong>
+							drücken und auf einen Link klicken. oder die <strong>Umschalttaste</strong>
+							drücken und mit der mittleren Maustaste oder dem Mausrad auf
+							einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab
+							und wechselt zu dem neu geöffneten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste</strong>
+							drücken und auf einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-T</strong></td>
+						<td class="border_right">Öffnet den zuletzt geschlossenen
+							Tab. In Google Chrome werden die letzten zehn geschlossenen Tabs
+							gespeichert.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Tab aus der Tableiste ziehen</td>
+						<td class="border_right">Öffnet den Tab in einem neuen
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Tab aus der Tableiste in ein
+							vorhandenes Fenster ziehen</td>
+						<td class="border_right">Öffnet den Tab in diesem Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste</strong>
+							zusammen mit dem Rechtspfeil drücken</td>
+						<td class="border_right">Wechselt zum nächsten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste</strong>
+							zusammen mit dem Linkspfeil drücken</td>
+						<td class="border_right">Wechselt zum vorherigen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-W</strong></td>
+						<td class="border_right">Schließt den aktuellen Tab oder das
+							aktuelle Pop-up.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-W</strong></td>
+						<td class="border_right">Schließt das aktuelle Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left">auf den Vorwärts- oder Zurück-Pfeil
+							in der Browser-Symbolleiste entweder mit der rechten Maustaste
+							klicken oder darauf klicken und die Maustaste gedrückt halten</td>
+						<td class="border_right">Zeigt den Browserverlauf des Tabs
+							an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Delete</strong> oder <strong>⌘-[</strong>
+						</td>
+						<td class="border_right">Wechselt im Browserverlauf des Tabs
+							zur vorherigen Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste-Delete</strong>
+							oder <strong>⌘-]</strong></td>
+						<td class="border_right">Wechselt im Browserverlauf des Tabs
+							zur nächsten Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Bei gedrückter <strong>Umschalttaste</strong>
+							auf das Pluszeichen links oben im Fenster klicken</td>
+						<td class="border_right">Maximiert das Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-M</strong></td>
+						<td class="border_right">Minimiert das Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-H </strong></td>
+						<td class="border_right">Blendet Google Chrome aus.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste-H </strong></td>
+						<td class="border_right">Blendet alle anderen Fenster aus.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>⌘-Q</strong></td>
+						<td>Schließt Google Chrome.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>
+				<img id="IMGscGCFMAC" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für
+					Google Chrome-Funktionen</span>
+			</h3>
+			<table id="scGCFMAC" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Umschalttaste-B</strong>
+						</td>
+						<td class="border_right">Blendet die Lesezeichenleiste ein
+							oder aus.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Optionstaste-B
+						</strong></td>
+						<td class="border_right">Öffnet den Lesezeichen-Manager.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-, </strong></td>
+						<td class="border_right">Öffnet das Dialogfeld
+							"Einstellungen".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Y </strong></td>
+						<td class="border_right">Öffnet die Seite "Verlauf".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-J </strong></td>
+						<td class="border_right">Öffnet die Seite "Downloads".</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>⌘-Umschalttaste-Delete</strong>
+						</td>
+						<td>Öffnet das Dialogfenster "Internetdaten löschen".</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>
+				<img id="IMGscAMAC" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für die
+					Adressleiste</span>
+			</h3>
+			<table id="scAMAC" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%">Suchbegriff eingeben und
+							dann <strong>Eingabetaste</strong> drücken</td>
+						<td class="border_right">Führt eine Suchanfrage mit Ihrer
+							Standardsuchmaschine durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Suchmaschinenkürzel eingeben, <strong>Leertaste</strong>
+							drücken, Suchbegriff eingeben und <strong>Eingabetaste</strong>
+							drücken.</td>
+						<td class="border_right">Führt mithilfe der Suchmaschine, die
+							dem Suchkürzel zugeordnet ist, eine Suchanfrage durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">URL einer Suchmaschine eingeben, bei
+							Aufforderung <strong>Tabulatortaste</strong> drücken, Suchbegriff
+							eingeben und <strong>Eingabetaste</strong> drücken.</td>
+						<td class="border_right">Führt mithilfe der Suchmaschine, die
+							der URL zugeordnet ist, eine Suchanfrage durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">URL eingeben, dann <strong>⌘-Eingabetaste</strong>
+							drücken</td>
+						<td class="border_right">Öffnet die URL in einem neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-L</strong></td>
+						<td class="border_right">Markiert die URL.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste-F</strong></td>
+						<td class="border_right">Fügt ein Fragezeichen ("?") in die
+							Adressleiste ein. Geben Sie nach dem Fragezeichen einen
+							Suchbegriff ein, um mithilfe der Standardsuchmaschine eine
+							Suchanfrage durchzuführen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Optionstaste</strong>
+							zusammen mit dem Linkspfeil drücken</td>
+						<td class="border_right">Verschiebt den Cursor zum
+							vorangehenden Wort in der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Optionstaste</strong>
+							zusammen mit dem Rechtspfeil drücken</td>
+						<td class="border_right">Verschiebt den Cursor zum nächsten
+							Wort in der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste-Optionstaste</strong>
+							zusammen mit dem Linkspfeil drücken</td>
+						<td class="border_right">Markiert das vorangehende Wort in
+							der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste-Optionstaste</strong>
+							zusammen mit dem Rechtspfeil drücken</td>
+						<td class="border_right">Markiert das nächste Wort in der
+							Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Löschen</strong></td>
+						<td class="border_right">Löscht den Begriff, der in der
+							Adressleiste vor dem Cursor steht.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Bild-auf-Taste</strong> oder
+							<strong>Bild-ab-Taste</strong> im Menü der Adressleiste drücken</td>
+						<td>Wählt den vorherigen oder nächsten Eintrag im Menü aus.</td>
+					</tr>
+				</tbody>
+			</table>
+			<a name="webpage"></a>
+			<h3>
+				<img id="IMGscWMAC" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für
+					Webseiten</span>
+			</h3>
+			<table id="scWMAC" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-P </strong></td>
+						<td class="border_right">Druckt die aktuelle Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Umschalttaste-P
+						</strong></td>
+						<td class="border_right">Öffnet das Dialogfeld
+							"Papierformat".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-S</strong></td>
+						<td class="border_right">Speichert die aktuelle Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-I </strong></td>
+						<td class="border_right">Sendet die aktuelle Seite per
+							E-Mail.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-R</strong></td>
+						<td class="border_right">Lädt die aktuelle Seite erneut.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-,</strong></td>
+						<td class="border_right">Beendet das Laden der aktuellen
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-F </strong></td>
+						<td class="border_right">Öffnet die Suchleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-G</strong></td>
+						<td class="border_right">Zeigt den nächsten Treffer für Ihre
+							Eingabe in der Suchleiste an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-G</strong>
+							oder <strong>Umschalttaste-Eingabetaste</strong></td>
+						<td class="border_right">Zeigt den vorherigen Treffer für
+							Ihre Eingabe in der Suchleiste an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-E</strong></td>
+						<td class="border_right">Sucht nach der Auswahl.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-J</strong></td>
+						<td class="border_right">Springt zur Auswahl.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste-I </strong></td>
+						<td class="border_right">Öffnet die Entwicklertools.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste-J</strong></td>
+						<td class="border_right">Öffnet die JavaScript-Konsole.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Optionstaste-U </strong></td>
+						<td class="border_right">Zeigt die Quelle der aktuellen Seite
+							an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Optionstaste</strong> drücken
+							und auf einen Link klicken</td>
+						<td class="border_right">Lädt das Linkziel herunter.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Ziehen eines Links in die
+							Lesezeichenleiste</td>
+						<td class="border_right">Speichert den Link als Lesezeichen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-D</strong></td>
+						<td class="border_right">Speichert Ihre aktuelle Webseite als
+							Lesezeichen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-D </strong></td>
+						<td class="border_right">Speichert alle geöffneten Tabs als
+							Lesezeichen in einem neuen Ordner.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Umschalttaste-F
+						</strong></td>
+						<td class="border_right">Öffnet die Seite im Vollbildmodus.
+							Drücken Sie die Tasten <strong>⌘-Umschalttaste-F</strong> erneut,
+							um den Vollbildmodus zu beenden.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-+ </strong></td>
+						<td class="border_right">Vergrößert den gesamten Inhalt der
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘ und -
+						</strong></td>
+						<td class="border_right">Verkleinert den gesamten Inhalt der
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-0 </strong></td>
+						<td class="border_right">Stellt die normale Größe des
+							Seiteninhalts wieder her.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Umschalttaste-H
+						</strong></td>
+						<td class="border_right">Öffnet Ihre Homepage im aktuellen
+							Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Leertaste</strong></td>
+						<td class="border_right">Blättert auf der Webseite nach
+							unten.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>⌘-Optionstaste-F</strong></td>
+						<td>Durchsucht das Web.</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>
+				<img id="IMGscTMAC" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für Text</span>
+			</h3>
+			<table id="scTMAC" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-C</strong></td>
+						<td class="border_right">Kopiert den markierten Inhalt in die
+							Zwischenablage.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Optionstaste-C</strong>
+						</td>
+						<td class="border_right">Kopiert die URL der aktuellen
+							Webseite in die Zwischenablage.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-V</strong></td>
+						<td class="border_right">Fügt den Inhalt aus der
+							Zwischenablage ein.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-Umschalttaste-Optionstaste-V</strong>
+						</td>
+						<td class="border_right">Fügt den Inhalt mit der Formatierung
+							des umgebenden Texts ein.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>⌘-X</strong> oder <strong>Umschalttaste-Löschen</strong>
+						</td>
+						<td class="border_right">Schneidet den markierten Inhalt aus
+							und speichert ihn in der Zwischenablage.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Z</strong></td>
+						<td class="border_right">Macht Ihre letzte Aktion rückgängig.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-Umschalttaste-Z</strong>
+						</td>
+						<td class="border_right">Wiederholt Ihre letzte Aktion.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-X</strong></td>
+						<td class="border_right">Schneidet den markierten Inhalt aus,
+							das heißt er wird entfernt und in der Zwischenablage gespeichert.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-A</strong></td>
+						<td class="border_right">Wählt den gesamten Text auf der
+							aktuellen Webseite aus.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>⌘-:</strong></td>
+						<td class="border_right">Öffnet das Dialogfeld
+							"Rechtschreibung und Grammatik".</td>
+					</tr>
+					<tr>
+						<td class="bottom_left" width="50%"><strong>⌘-;</strong></td>
+						<td>Überprüft die Rechtschreibung und Grammatik auf der
+							aktuellen Webseite.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+	<div id="contLinux" class="popcontent" style="display: none">
+
+		<div class="table">
+			<h3>
+				<img id="IMGscTFLIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id, '1')"><span>Tastaturkürzel für
+					Tabs und Fenster</span>
+			</h3>
+			<table id="scTFLIN" cellspacing="0" cellpadding="3"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+N</strong></td>
+						<td class="border_right">Öffnet ein neues Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+T</strong></td>
+						<td class="border_right">Öffnet einen neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+N</strong>
+						</td>
+						<td class="border_right">Öffnet ein neues Fenster im Modus
+							für anonymes Browsen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+O</strong> drücken und
+							Datei auswählen</td>
+						<td class="border_right">Öffnet eine Datei von Ihrem Computer
+							in Google Chrome.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> drücken und auf
+							einen Link klicken oder mit der mittleren Maustaste oder dem
+							Mausrad auf einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab
+							im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste</strong>
+							drücken und auf einen Link klicken oder die <strong>Umschalttaste</strong>
+							drücken und mit der mittleren Maustaste oder dem Mausrad auf
+							einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab
+							und wechselt zu dem neu geöffneten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste</strong>
+							drücken und auf einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+T</strong>
+						</td>
+						<td class="border_right">Öffnet den zuletzt geschlossenen
+							Tab. In Google Chrome werden die letzten zehn geschlossenen Tabs
+							gespeichert.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Link in einen Tab ziehen</td>
+						<td class="border_right">Öffnet den Link in dem Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Link in einen leeren Bereich auf der
+							Tableiste ziehen</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Tab aus der Tableiste ziehen</td>
+						<td class="border_right">Öffnet den Tab in einem neuen
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Tab aus der Tableiste in ein
+							vorhandenes Fenster ziehen</td>
+						<td class="border_right">Öffnet den Tab in diesem Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left">beim Ziehen eines Tabs <strong>Esc</strong>
+							drücken</td>
+						<td class="border_right">Verschiebt den Tab zurück an seine
+							ursprüngliche Position.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+1</strong> bis <strong>Strg+8</strong>
+						</td>
+						<td class="border_right">Wechselt zu dem Tab mit der
+							angegebenen Positionsnummer auf der Tableiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+9</strong></td>
+						<td class="border_right">Wechselt zum letzten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Tabulatortaste</strong>
+							oder <strong>Strg+BildAb</strong></td>
+						<td class="border_right">Wechselt zum nächsten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+Tabulatortaste
+						</strong>oder <strong>Strg+BildAuf</strong></td>
+						<td class="border_right">Wechselt zum vorherigen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+Q</strong>
+						</td>
+						<td class="border_right">Schließt Google Chrome.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+W</strong> oder <strong>Strg+F4</strong>
+						</td>
+						<td class="border_right">Schließt den aktuellen Tab oder das
+							aktuelle Pop-up.</td>
+					</tr>
+					<tr>
+						<td class="border_left">mit der mittleren Maustaste oder den
+							Mausrad auf einen Tab klicken</td>
+						<td class="border_right">Schließt den angeklickten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left">auf den Vorwärts- oder Zurück-Pfeil
+							in der Browser-Symbolleiste entweder mit der rechten Maustaste
+							klicken oder darauf klicken und die Maustaste gedrückt halten</td>
+						<td class="border_right">Zeigt den Browserverlauf des Tabs
+							an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Alt</strong> zusammen mit dem
+							Linkspfeil drücken</td>
+						<td class="border_right">Wechselt im Browserverlauf des Tabs
+							zur vorherigen Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Alt</strong> zusammen mit dem
+							Rechtspfeil drücken</td>
+						<td class="border_right">Wechselt im Browserverlauf des Tabs
+							zur nächsten Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left">mit der mittleren Maustaste oder dem
+							Mausrad in der Symbolleiste entweder auf den Rückwärtspfeil, den
+							Vorwärtspfeil oder auf die Schaltfläche "Los" klicken</td>
+						<td class="border_right">Öffnet das Schaltflächenziel in
+							einem neuen Tab im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="border_bottom">auf den leeren Bereich der
+							Tableiste doppelklicken</td>
+						<td>Maximiert oder minimiert das Fenster.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>
+				<img id="IMGscGCFLIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für
+					Google Chrome-Funktionen</span>
+			</h3>
+			<table id="scGCFLIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Alt+F</strong></td>
+						<td class="border_right">Öffnet das Schraubenschlüssel-Menü,
+							in dem Sie Google Chrome anpassen und steuern können.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>Alt+E</strong></td>
+						<td class="border_right">Öffnet das Seiten-Menü mit
+							Funktionen für die momentan angezeigte Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+Umschalttaste+B</strong>
+						</td>
+						<td class="border_right">Blendet die Lesezeichenleiste ein
+							oder aus.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+H</strong></td>
+						<td class="border_right">Öffnet die Seite "Verlauf".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+J</strong></td>
+						<td class="border_right">Öffnet die Seite "Downloads".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste+Esc</strong></td>
+						<td class="border_right">Öffnet den Task-Manager.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+J</strong>
+						</td>
+						<td class="border_right">Öffnet die Entwicklertools.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+Entf</strong>
+						</td>
+						<td class="border_right">Öffnet das Dialogfenster
+							"Internetdaten löschen".</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>F1</strong></td>
+						<td>Öffnet die Hilfe in einem neuen Tab (unser Favorit).</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>
+				<img id="IMGscALIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für die
+					Adressleiste</span>
+			</h3>
+			<table id="scALIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%">Suchbegriff eingeben und
+							dann <strong>Eingabetaste</strong> drücken</td>
+						<td class="border_right">Führt eine Suchanfrage mit Ihrer
+							Standardsuchmaschine durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Suchmaschinenkürzel eingeben, <strong>Leertaste</strong>
+							drücken, Suchbegriff eingeben und <strong>Eingabetaste</strong>
+							drücken.</td>
+						<td class="border_right">Führt mithilfe der Suchmaschine, die
+							dem Suchkürzel zugeordnet ist, eine Suchanfrage durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">URL einer Suchmaschine eingeben, bei
+							Aufforderung <strong>Tabulatortaste</strong> drücken, Suchbegriff
+							eingeben und <strong>Eingabetaste</strong> drücken.</td>
+						<td class="border_right">Führt mithilfe der Suchmaschine, die
+							der URL zugeordnet ist, eine Suchanfrage durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+L</strong></td>
+						<td class="border_right">Markiert die URL.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+K</strong> oder <strong>Strg+E</strong>
+						</td>
+						<td class="border_right">Fügt ein Fragezeichen ("?") in die
+							Adressleiste ein. Geben Sie nach dem Fragezeichen einen
+							Suchbegriff ein, um mithilfe der Standardsuchmaschine eine
+							Suchanfrage durchzuführen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste</strong>
+							zusammen mit dem Linkspfeil drücken</td>
+						<td class="border_right">Verschiebt den Cursor zum
+							vorangehenden Wort in der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste</strong>
+							zusammen mit dem Rechtspfeil drücken</td>
+						<td class="border_right">Verschiebt den Cursor zum nächsten
+							Wort in der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Rücktaste</strong></td>
+						<td class="border_right">Löscht den Begriff, der in der
+							Adressleiste vor dem Cursor steht.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Mithilfe der Pfeiltasten einen
+							Eintrag im Dropdown-Menü der Adressleiste auswählen und
+							anschließend <strong>Umschalttaste+Entf</strong> drücken</td>
+						<td class="border_right">Löscht den Eintrag falls möglich aus
+							Ihrem Browserverlauf.</td>
+					</tr>
+					<tr>
+						<td class="border_left">mit der mittleren Maustaste oder dem
+							Mausrad auf einen Eintrag im Dropdown-Menü der Adressleiste
+							klicken</td>
+						<td class="border_right">Öffnet den Eintrag in einem neuen
+							Tab im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Bild-auf-Taste</strong> oder
+							<strong>Bild-ab-Taste</strong> drücken, während das Dropdown-Menü
+							der Adressleiste angezeigt wird</td>
+						<td>Wählt den ersten bzw. letzten Eintrag aus dem
+							Dropdown-Menü aus.</td>
+					</tr>
+				</tbody>
+			</table>
+			<a name="webpage"></a>
+			<h3>
+				<img id="IMGscWLIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für
+					Webseiten</span>
+			</h3>
+			<table id="scWLIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+P</strong></td>
+						<td class="border_right">Druckt die aktuelle Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+S</strong></td>
+						<td class="border_right">Speichert die aktuelle Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+R</strong></td>
+						<td class="border_right">Lädt die aktuelle Seite erneut.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Esc</strong></td>
+						<td class="border_right">Beendet das Laden der aktuellen
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+F</strong></td>
+						<td class="border_right">Öffnet die Suchleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+G</strong> oder<strong>Eingabetaste</strong>
+						</td>
+						<td class="border_right">Zeigt den nächsten Treffer für Ihre
+							Eingabe in der Suchleiste an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+G</strong>
+							oder <strong>Umschalttaste+Eingabetaste</strong></td>
+						<td class="border_right">Zeigt den vorherigen Treffer für
+							Ihre Eingabe in der Suchleiste an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Alt</strong> drücken und auf
+							einen Link klicken</td>
+						<td class="border_right">Lädt das Linkziel herunter.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+U</strong></td>
+						<td class="border_right">Zeigt die Quelle der aktuellen Seite
+							an.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Link in die Lesezeichenleiste ziehen</td>
+						<td class="border_right">Speichert den Link als Lesezeichen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+D</strong></td>
+						<td class="border_right">Speichert Ihre aktuelle Webseite als
+							Lesezeichen.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+Umschalttaste+D
+						</strong></td>
+						<td class="border_right">Speichert alle geöffneten Webseiten
+							als Lesezeichen in einem neuen Ordner.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>F11</strong></td>
+						<td class="border_right">Öffnet die Seite im Vollbildmodus.
+							Drücken Sie die Taste <strong>F11</strong> erneut, um den
+							Vollbildmodus zu beenden.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> und <strong>+</strong>
+							drücken oder <strong>Strg</strong> drücken und mit dem Mausrad
+							nach oben blättern</td>
+						<td class="border_right">Vergrößert den gesamten Inhalt der
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> und <strong>-</strong>
+							drücken oder <strong>Strg</strong> drücken und mit dem Mausrad
+							nach unten blättern</td>
+						<td class="border_right">Verkleinert den gesamten Inhalt der
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+0</strong></td>
+						<td class="border_right">Stellt die normale Größe des
+							Seiteninhalts wieder her.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Leertaste</strong></td>
+						<td class="border_right">Blättert auf der Webseite nach
+							unten.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Pos1</strong></td>
+						<td class="border_right">Springt an den Anfang der Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_bottom"><strong>Ende</strong></td>
+						<td>Springt an das Ende der Seite.</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>
+				<img id="IMGscTLIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für Text</span>
+			</h3>
+			<table id="scTLIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+C</strong></td>
+						<td class="border_right">Kopiert den markierten Inhalt in die
+							Zwischenablage.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+V</strong> oder <strong>Umschalttaste+Einfg</strong>
+						</td>
+						<td class="border_right">Fügt den Inhalt aus der
+							Zwischenablage ein.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+V</strong>
+						</td>
+						<td class="border_right">Fügt den Inhalt als unformatierten
+							Text aus Zwischenablage ein.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Strg+X</strong> oder <strong>Umschalttaste+Entf</strong>
+						</td>
+						<td>Schneidet den markierten Inhalt aus und speichert ihn in
+							der Zwischenablage.</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+
+
+
+
+
+	</div>
+
+
+	<div id="contWindows" class="popcontent" style="display: none">
+
+		<div class="table">
+			<h3>
+				<img id="IMGscTFWIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für Tabs
+					und Fenster</span>
+			</h3>
+			<table id="scTFWIN" cellspacing="0" cellpadding="3"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+N</strong></td>
+						<td class="border_right">Öffnet ein neues Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+T</strong></td>
+						<td class="border_right">Öffnet einen neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+N</strong>
+						</td>
+						<td class="border_right">Öffnet ein neues Fenster im Modus
+							für anonymes Browsen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+O</strong> drücken und
+							Datei auswählen</td>
+						<td class="border_right">Öffnet eine Datei von Ihrem Computer
+							in Google Chrome.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> drücken und auf
+							einen Link klicken oder mit der mittleren Maustaste oder dem
+							Mausrad auf einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab
+							im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste</strong>
+							drücken und auf einen Link klicken oder die <strong>Umschalttaste</strong>
+							drücken und mit der mittleren Maustaste oder dem Mausrad auf
+							einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab
+							und wechselt zu dem neu geöffneten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste</strong>
+							drücken und auf einen Link klicken</td>
+						<td class="border_right">Öffnet den Link in einem neuen
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+T</strong>
+						</td>
+						<td class="border_right">Öffnet den zuletzt geschlossenen
+							Tab. In Google Chrome werden die letzten zehn geschlossenen Tabs
+							gespeichert.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Link in einen Tab ziehen</td>
+						<td class="border_right">Öffnet den Link in dem Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Link in einen leeren Bereich auf der
+							Tableiste ziehen</td>
+						<td class="border_right">Öffnet den Link in einem neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Tab aus der Tableiste ziehen</td>
+						<td class="border_right">Öffnet den Tab in einem neuen
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Tab aus der Tableiste in ein
+							vorhandenes Fenster ziehen</td>
+						<td class="border_right">Öffnet den Tab in diesem Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left">beim Ziehen eines Tabs <strong>Esc</strong>
+							drücken</td>
+						<td class="border_right">Verschiebt den Tab zurück an seine
+							ursprüngliche Position.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+1</strong> bis <strong>Strg+8</strong>
+						</td>
+						<td class="border_right">Wechselt zu dem Tab mit der
+							angegebenen Positionsnummer auf der Tableiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+9</strong></td>
+						<td class="border_right">Wechselt zum letzten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Tabulatortaste</strong>
+							oder <strong>Strg+BildAb</strong></td>
+						<td class="border_right">Wechselt zum nächsten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+Tabulatortaste
+						</strong>oder <strong>Strg+BildAuf</strong></td>
+						<td class="border_right">Wechselt zum vorherigen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Alt+F4</strong></td>
+						<td class="border_right">Schließt das aktuelle Fenster.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+W</strong> oder <strong>Strg+F4</strong>
+						</td>
+						<td class="border_right">Schließt den aktuellen Tab oder das
+							aktuelle Pop-up.</td>
+					</tr>
+					<tr>
+						<td class="border_left">mit der mittleren Maustaste oder den
+							Mausrad auf einen Tab klicken</td>
+						<td class="border_right">Schließt den angeklickten Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left">auf den Vorwärts- oder Zurück-Pfeil
+							in der Browser-Symbolleiste entweder mit der rechten Maustaste
+							klicken oder darauf klicken und die Maustaste gedrückt halten</td>
+						<td class="border_right">Zeigt den Browserverlauf des Tabs
+							an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Rücktaste</strong> oder <strong>Alt</strong>
+							und Linkspfeiltaste drücken</td>
+						<td class="border_right">Wechselt im Browserverlauf des Tabs
+							zur vorherigen Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste+Rücktaste</strong>
+							oder <strong>Alt</strong> und Rechtspfeiltaste drücken</td>
+						<td class="border_right">Wechselt im Browserverlauf des Tabs
+							zur nächsten Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> drücken und
+							entweder auf den Zurückpfeil, den Vorwärtspfeil oder die
+							Schaltfläche "Los" in der Symbolleiste klicken oder mit der
+							mittleren Maustaste oder dem Mausrad auf eine dieser
+							Schaltflächen klicken</td>
+						<td class="border_right">Öffnet das Schaltflächenziel in
+							einem neuen Tab im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="border_left">auf den leeren Bereich der Tableiste
+							doppelklicken</td>
+						<td class="border_right">Maximiert oder minimiert das
+							Fenster.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Alt+Pos1</strong></td>
+						<td>Öffnet Ihre Homepage in dem aktuellen Fenster.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>
+				<img id="IMGscGCFWIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für
+					Google Chrome-Funktionen</span>
+			</h3>
+			<table id="scGCFWIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Alt+F</strong></td>
+						<td class="border_right">Öffnet das Schraubenschlüssel-Menü,
+							in dem Sie Google Chrome anpassen und Einstellungen festlegen
+							können.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+Umschalttaste+B</strong>
+						</td>
+						<td class="border_right">Blendet die Lesezeichenleiste ein
+							oder aus.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+H</strong></td>
+						<td class="border_right">Öffnet die Seite "Verlauf".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+J</strong></td>
+						<td class="border_right">Öffnet die Seite "Downloads".</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste+Esc</strong></td>
+						<td class="border_right">Öffnet den Task-Manager.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Umschalttaste+Alt+T</strong>
+						</td>
+						<td class="border_right">Setzt den Fokus auf das erste Tool
+							in der Symbolleiste des Browsers. Sie können dann mit den
+							folgenden Tastaturkürzeln innerhalb der Symbolleiste navigieren:
+							<ul>
+								<li>Drücken Sie <strong>Tabulatortaste,
+										Umschalttaste+Tabulatortaste, Pos1, Ende, Rechtspfeil</strong> und <strong>Linkspfeil</strong>,
+									um den Fokus auf die verschiedenen Elemente der Symbolleiste zu
+									verschieben.</li>
+								<li>Drücken Sie die <strong>Leertaste</strong> oder <strong>Eingabetaste</strong>,
+									um Schaltflächen der Symbolleiste zu aktivieren, beispielsweise
+									für Seiten- und Browseraktionen.</li>
+								<li>Drücken Sie <strong>Umschalttaste+F10</strong>, um das
+									zugehörige Kontextmenü anzuzeigen, beispielsweise den
+									Browserverlauf bei der Schaltfläche "Zurück".</li>
+								<li>Drücken Sie <strong>Esc</strong> um den Fokus wieder
+									auf die Seite zu setzen.</li>
+								<li>Drücken Sie <strong>F6</strong> oder <strong>Umschalttaste+F6</strong>,
+									um den Fokus auf den nächsten Bereich zu setzen, der über die
+									Tastatur zugänglich ist. Zu diesen Bereichen zählen der
+									Haupt-Web-Content, die Symbolleiste sowie gegebenenfalls die
+									Lesezeichenleiste.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+J</strong>
+						</td>
+						<td class="border_right">Öffnet die Entwicklertools.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+Entf</strong>
+						</td>
+						<td class="border_right">Öffnet das Dialogfenster
+							"Internetdaten löschen".</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>F1</strong></td>
+						<td>Öffnet die Hilfe in einem neuen Tab (unser Favorit).</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>
+				<img id="IMGscAWIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für die
+					Adressleiste</span>
+			</h3>
+			<table id="scAWIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%">Suchbegriff eingeben und
+							dann <strong>Eingabetaste</strong> drücken</td>
+						<td class="border_right">Führt eine Suchanfrage mit Ihrer
+							Standardsuchmaschine durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Suchmaschinenkürzel eingeben, <strong>Leertaste</strong>
+							drücken, Suchbegriff eingeben und <strong>Eingabetaste</strong>
+							drücken.</td>
+						<td class="border_right">Führt mithilfe der Suchmaschine, die
+							dem Suchkürzel zugeordnet ist, eine Suchanfrage durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left">URL einer Suchmaschine eingeben, bei
+							Aufforderung <strong>Tabulatortaste</strong> drücken, Suchbegriff
+							eingeben und <strong>Eingabetaste</strong> drücken.</td>
+						<td class="border_right">Führt mithilfe der Suchmaschine, die
+							der URL zugeordnet ist, eine Suchanfrage durch.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Eingabetaste</strong></td>
+						<td class="border_right">Fügt die Zeichen <span class="code">www.</span>
+							und <span class="code">.com</span> zu Ihrer Eingabe in der
+							Adressleiste hinzu und öffnet die dadurch entstehende URL.</td>
+					</tr>
+					<tr>
+						<td class="border_left">URL eingeben, dann <strong>Alt+Eingabetaste</strong>
+							drücken</td>
+						<td class="border_right">Öffnet die URL in einem neuen Tab.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>F6</strong> oder <strong>Strg+L</strong>
+							oder <strong>Alt+D</strong></td>
+						<td class="border_right">Markiert die URL.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+K</strong> oder <strong>Strg+E</strong>
+						</td>
+						<td class="border_right">Fügt ein Fragezeichen ("?") in die
+							Adressleiste ein. Geben Sie nach dem Fragezeichen einen
+							Suchbegriff ein, um mithilfe der Standardsuchmaschine eine
+							Suchanfrage durchzuführen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> zusammen mit
+							dem Linkspfeil drücken</td>
+						<td class="border_right">Verschiebt den Cursor zum
+							vorangehenden Wort in der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> zusammen mit
+							dem Rechtspfeil drücken</td>
+						<td class="border_right">Verschiebt den Cursor zum nächsten
+							Wort in der Adressleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Rücktaste</strong></td>
+						<td class="border_right">Löscht den Begriff, der in der
+							Adressleiste vor dem Cursor steht.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Mithilfe der Pfeiltasten einen
+							Eintrag im Dropdown-Menü der Adressleiste auswählen und
+							anschließend <strong>Umschalttaste+Entf</strong> drücken</td>
+						<td class="border_right">Löscht den Eintrag falls möglich aus
+							Ihrem Browserverlauf.</td>
+					</tr>
+					<tr>
+						<td class="border_left">mit der mittleren Maustaste oder dem
+							Mausrad auf einen Eintrag im Dropdown-Menü der Adressleiste
+							klicken</td>
+						<td class="border_right">Öffnet den Eintrag in einem neuen
+							Tab im Hintergrund.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Bild-auf-Taste</strong> oder
+							<strong>Bild-ab-Taste</strong> drücken, während das Dropdown-Menü
+							der Adressleiste angezeigt wird</td>
+						<td>Wählt den ersten bzw. letzten Eintrag aus dem
+							Dropdown-Menü aus.</td>
+					</tr>
+				</tbody>
+			</table>
+			<a name="webpage"></a>
+			<h3>
+				<img id="IMGscWWIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für
+					Webseiten</span>
+			</h3>
+			<table id="scWWIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+P</strong></td>
+						<td class="border_right">Druckt die aktuelle Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+S</strong></td>
+						<td class="border_right">Speichert die aktuelle Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>F5</strong> oder <strong>Strg+R</strong>
+						</td>
+						<td class="border_right">Lädt die aktuelle Seite erneut.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Esc</strong></td>
+						<td class="border_right">Beendet das Laden der aktuellen
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+F</strong></td>
+						<td class="border_right">Öffnet die Suchleiste.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+G</strong> oder <strong>F3</strong>
+						</td>
+						<td class="border_right">Zeigt den nächsten Treffer für Ihre
+							Eingabe in der Suchleiste an.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+G</strong>,
+							<strong>Umschalttaste+F3</strong> oder <strong>Umschalttaste+Eingabetaste</strong>
+						</td>
+						<td class="border_right">Zeigt den vorherigen Treffer für
+							Ihre Eingabe in der Suchleiste an.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Mit der mittleren Maustaste oder dem
+							Mausrad klicken</td>
+						<td class="border_right">Aktiviert das automatische Scrollen.
+							Beim Bewegen der Maus wird entsprechend deren Bewegungsrichtung
+							automatisch durch die Seite geblättert.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+F5</strong> oder <strong>Umschalttaste+F5</strong>
+						</td>
+						<td class="border_right">Lädt die aktuelle Seite erneut und
+							ignoriert dabei die im Cache gespeicherten Inhalte.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Alt</strong> drücken und auf
+							einen Link klicken</td>
+						<td class="border_right">Lädt das Linkziel herunter.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+U</strong></td>
+						<td class="border_right">Zeigt die Quelle der aktuellen Seite
+							an.</td>
+					</tr>
+					<tr>
+						<td class="border_left">Link in die Lesezeichenleiste ziehen</td>
+						<td class="border_right">Speichert den Link als Lesezeichen.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+D</strong></td>
+						<td class="border_right">Speichert Ihre aktuelle Webseite als
+							Lesezeichen.</td>
+					</tr>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+Umschalttaste+D
+						</strong></td>
+						<td class="border_right">Speichert alle geöffneten Webseiten
+							als Lesezeichen in einem neuen Ordner.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>F11</strong></td>
+						<td class="border_right">Öffnet die Seite im Vollbildmodus.
+							Drücken Sie die Taste <strong>F11</strong> erneut, um den
+							Vollbildmodus zu beenden.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> und <strong>+</strong>
+							drücken oder <strong>Strg</strong> drücken und mit dem Mausrad
+							nach oben blättern</td>
+						<td class="border_right">Vergrößert den gesamten Inhalt der
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg</strong> und <strong>-</strong>
+							drücken oder <strong>Strg</strong> drücken und mit dem Mausrad
+							nach unten blättern</td>
+						<td class="border_right">Verkleinert den gesamten Inhalt der
+							Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+0</strong></td>
+						<td class="border_right">Stellt die normale Größe des
+							Seiteninhalts wieder her.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Leertaste</strong></td>
+						<td class="border_right">Blättert auf der Webseite nach
+							unten.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Pos1</strong></td>
+						<td class="border_right">Springt an den Anfang der Seite.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Ende</strong></td>
+						<td class="border_right">Springt an das Ende der Seite.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Umschalttaste</strong>
+							drücken und mit dem Mausrad blättern</td>
+						<td>Blättert in horizontaler Richtung auf der Seite.</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>
+				<img id="IMGscTWIN" class="disclosure" src="disc_arrow.png" alt=""
+					onclick="show(this.id)"><span>Tastaturkürzel für Text</span>
+			</h3>
+			<table id="scTWIN" cellpadding="3" cellspacing="0"
+				style="display: none;">
+				<tbody>
+					<tr>
+						<td class="border_left" width="50%"><strong>Strg+C</strong></td>
+						<td class="border_right">Kopiert den markierten Inhalt in die
+							Zwischenablage.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+V</strong> oder <strong>Umschalttaste+Einfg</strong>
+						</td>
+						<td class="border_right">Fügt den Inhalt aus der
+							Zwischenablage ein.</td>
+					</tr>
+					<tr>
+						<td class="border_left"><strong>Strg+Umschalttaste+V</strong>
+						</td>
+						<td class="border_right">Fügt den Inhalt als unformatierten
+							Text aus Zwischenablage ein.</td>
+					</tr>
+					<tr>
+						<td class="bottom_left"><strong>Strg+X</strong> oder <strong>Umschalttaste+Entf</strong>
+						</td>
+						<td>Schneidet den markierten Inhalt aus und speichert ihn in
+							der Zwischenablage.</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+
+	</div>
+
+</body>
+</html>
